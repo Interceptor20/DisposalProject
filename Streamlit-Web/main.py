@@ -5,7 +5,7 @@ import numpy as np
 
 # TensorFlow Model Prediction
 def model_prediction(test_image):
-    model = tf.keras.models.load_model('../trained_model.h5')
+    model = tf.keras.models.load_model('trained_model.h5')
     image = tf.keras.preprocessing.image.load_img(test_image, target_size=(64,64))  # Perform image preprocessing using the same target size as our test set
     input_arr = tf.keras.preprocessing.image.img_to_array(image)
     input_arr = np.array([input_arr])  # Convert single image into batch
@@ -28,7 +28,7 @@ if app_mode == 'Home':
     st.header('Project')
     st.subheader('Recognition and Classification of Organic and Inorganic Waste for Proper Recycling/Disposal Process')
     st.text('Built By: Michael Joshua')
-    image_path = r'c:\Users\HP\Downloads\448100104_789065899874301_8041191113684386521_n.jpg'
+    image_path = 'Streamlit-Web/home.jpg'
     st.image(image_path)
 
 # About Project
